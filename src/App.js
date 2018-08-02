@@ -22,7 +22,7 @@ const CardGroup = props => (
       price="$100.00"
       hint="(most popular)"
       icon="fa-trophy"
-    />
+    />yar
 
     <Card
       description="Advanced Tier"
