@@ -14,7 +14,8 @@ import React from "react";
  */
 const CardGroup = props => (
   <div className="cardGroup">
-    <Card description="Trial" price="free" icon="fa-thumbs-o-up" />
+    {props.children}
+    {/* <Card description="Trial" price="free" icon="fa-thumbs-o-up" />
 
     <Card
       description="Basic Tier"
@@ -28,7 +29,7 @@ const CardGroup = props => (
       price="$6,000"
       hint="(only for enterprise-level professionals)"
       icon="fa-bolt"
-    />
+    /> */}
   </div>
 );
 
@@ -46,6 +47,24 @@ const Card = props => (
   </div>
 );
 
-const App = () => <CardGroup />;
+const App = () => (
+  <CardGroup>
+    <Card description="Trial" price="free" icon="fa-thumbs-o-up" />
+
+    <Card
+      description="Basic Tier"
+      price="$100.00"
+      hint="(most popular)"
+      icon="fa-trophy"
+    />
+
+    <Card
+      description="Advanced Tier"
+      price="$6,000"
+      hint="(only for enterprise-level professionals)"
+      icon="fa-bolt"
+    />
+  </CardGroup>
+);
 
 export default App;
